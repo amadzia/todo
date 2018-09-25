@@ -4,8 +4,8 @@
             <input type="checkbox"
                    class="list-child"
                    (change)="onTodoChange($event, todo)"
-                   [checked]="todo.completed">
-            <span ngClass="{{todo.completed ? 'name completed' : 'name'}}">{{todo.name}}</span>
+                   [checked]="todo.completed"/>
+            <span ngClass="{{todo.completed ? 'name.completed' : 'name'}}">{{todo.name}}</span>
             <span class="label {{getDueDateLabel(todo)}} float-right">{{todo.dueDate}}</span>
         </div>
     </li>

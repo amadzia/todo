@@ -5,6 +5,8 @@ import {AppComponent} from './app.component';
 import { TodosComponent } from './todos/todos.component';
 import { TodosAddComponent } from './todos/todos-add/todos-add.component';
 import { TodosListComponent } from './todos/todos-list/todos-list.component';
+import {TodoService} from "./todos/todo.service";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -14,9 +16,10 @@ import { TodosListComponent } from './todos/todos-list/todos-list.component';
     TodosListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+      HttpClientModule
   ],
-  providers: [],
+  providers: [TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
