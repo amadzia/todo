@@ -25,7 +25,7 @@ export class TodosListComponent implements OnInit {
     }
 
     onTodoChange($event, todo: Todo) {
-        console.log("Todo has changed");
+        this.todoService.saveTodo(todo, (<HTMLInputElement>event.target).checked).subscribe();
     }
 
     getDueDateLabel(todo: Todo) {
